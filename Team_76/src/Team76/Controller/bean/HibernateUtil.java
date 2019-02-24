@@ -28,6 +28,7 @@ public class HibernateUtil {
                 configuration.addAnnotatedClass(Quiz.class);
                 configuration.addAnnotatedClass(Answer.class);
                 configuration.addAnnotatedClass(Question.class);
+                configuration.addAnnotatedClass(Student.class);
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
                 sessionFactory = configuration.buildSessionFactory(serviceRegistry);
